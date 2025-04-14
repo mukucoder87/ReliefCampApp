@@ -14,11 +14,11 @@ document.getElementById('campForm').addEventListener('submit', function (e) {
     // ... add other fields similarly
   };
 
-  fetch('https://YOUR_BACKEND_URL/submit', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(formData)
-  })
+  fetch('https://reliefcampapp-24s3yvve8-mukundas-projects-7ce24570.vercel.app/submit', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(formData)
+})
   .then(response => response.json())
   .then(data => {
     alert(data.message);
