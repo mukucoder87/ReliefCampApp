@@ -1,0 +1,27 @@
+name: CI/CD for ReliefCampApp
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v3
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+        
+    - name: Install Dependencies
+      run: cd backend && npm install
+      
+    - name: Run Tests
+      run: echo "No tests defined yet."
+      
+    - name: Deployment Info
+      run: echo "Deploy the backend to your preferred free hosting."

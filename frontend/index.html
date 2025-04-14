@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Relief Camp Data Collection</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Relief Camp Data Collection Form</h1>
+  <form id="campForm">
+    <label for="district">Name of the District:</label>
+    <input type="text" id="district" name="district" required>
+
+    <label for="campName">Name of the Pre-Identified Relief Camp:</label>
+    <input type="text" id="campName" name="campName" required>
+
+    <label for="circle">Name of Circle:</label>
+    <input type="text" id="circle" name="circle" required>
+
+    <label for="village">Name of Village where the facility is located:</label>
+    <input type="text" id="village" name="village" required>
+
+    <label for="campIncharge">Name of Relief Camp Incharge:</label>
+    <input type="text" id="campIncharge" name="campIncharge" required>
+
+    <label for="latitude">Exact Latitude (Coordinates):</label>
+    <input type="text" id="latitude" name="latitude" required>
+
+    <label for="longitude">Exact Longitude (Coordinates):</label>
+    <input type="text" id="longitude" name="longitude" required>
+
+    <label for="distance">Distance from the nearest River (in metres):</label>
+    <input type="number" id="distance" name="distance" required>
+
+    <label for="totalPopulationCapacity">Total Population Capacity of the Camp:</label>
+    <input type="number" id="totalPopulationCapacity" name="totalPopulationCapacity" required>
+
+    <label for="totalArea">Total Area of the Camp (in Sq feet):</label>
+    <input type="number" id="totalArea" name="totalArea" required>
+
+    <!-- Add the remaining fields as needed -->
+    <!-- For brevity, only key fields are shown; simply replicate the pattern for the rest -->
+
+    <button type="submit">Submit Data</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
