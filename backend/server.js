@@ -4,14 +4,17 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: 'https://reliefcampapp.vercel.app', // 👈 put your actual Vercel frontend URL here
+  methods: ['GET', 'POST'],
+  credentials: false
+}));
+
 app.use(express.json());
 
 // 🔌 Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/reliefcamp', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
+mongoose.connect('mongodb://localhost:27017/reliefcamp')
+.then(() => {
   console.log("✅ Connected to MongoDB");
 }).catch(err => {
   console.error("❌ MongoDB connection error:", err);
