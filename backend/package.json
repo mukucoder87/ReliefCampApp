@@ -1,8 +1,6 @@
 {
   "name": "reliefcampapp",
   "version": "1.0.0",
-  "description": "Backend for Relief Camp Data Collection",
-  "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },

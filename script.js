@@ -1,5 +1,6 @@
 document.getElementById('campForm').addEventListener('submit', function (e) {
   e.preventDefault();
+  
   const formData = {
     district: document.getElementById('district').value,
     campName: document.getElementById('campName').value,
@@ -11,12 +12,15 @@ document.getElementById('campForm').addEventListener('submit', function (e) {
     distance: document.getElementById('distance').value,
     totalPopulationCapacity: document.getElementById('totalPopulationCapacity').value,
     totalArea: document.getElementById('totalArea').value
-    // ... add other fields similarly
   };
 
-  fetch('https://reliefcampapp-24s3yvve8-mukundas-projects-7ce24570.vercel.app/submit', {
+  console.log("Form data being sent:", formData);
+  
+ fetch('https://reliefcampapp-23bxc8tun-mukundas-projects-7ce24570.vercel.app/submit', {
   method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
+  headers: {
+    'Content-Type': 'application/json'
+  },
   body: JSON.stringify(formData)
 })
   .then(response => response.json())

@@ -8,7 +8,6 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // In-memory storage for demonstration.
-// For production, integrate a persistent database (e.g., MongoDB).
 const formDataStorage = [];
 
 app.post('/submit', (req, res) => {
@@ -18,7 +17,6 @@ app.post('/submit', (req, res) => {
   res.json({ message: "Data submitted successfully." });
 });
 
-// Dashboard endpoint to aggregate data by district
 app.get('/dashboardData', (req, res) => {
   const summary = {};
   formDataStorage.forEach(item => {
@@ -28,7 +26,6 @@ app.get('/dashboardData', (req, res) => {
         count: 0,
         totalPopulationCapacity: 0,
         totalArea: 0
-        // Extend this as you add more variables
       };
     }
     summary[district].count++;
@@ -37,6 +34,12 @@ app.get('/dashboardData', (req, res) => {
   });
   res.json(summary);
 });
+
+app.get('/', (req, res) => {
+  res.send('Server is working!');
+});
+
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
