@@ -16,7 +16,7 @@ document.getElementById('campForm').addEventListener('submit', function (e) {
 
   console.log("Form data being sent:", formData);
   
- fetch('https://reliefcampapp-23bxc8tun-mukundas-projects-7ce24570.vercel.app/submit', {
+ fetch('fetch('https://reliefcampapp-i0cashwcm-mukundas-projects-7ce24570.vercel.app/submit', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
